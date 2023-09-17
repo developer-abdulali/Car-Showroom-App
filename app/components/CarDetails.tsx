@@ -57,7 +57,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
                         src="/hero.png"
-                        alt="car model"
+                        alt="car Model"
                         fill
                         priority
                         className="object-contain"
