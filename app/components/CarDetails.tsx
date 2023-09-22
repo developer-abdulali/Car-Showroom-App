@@ -48,9 +48,9 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     <Image
                       src="/close.svg"
                       alt="close"
-                      width={20}
-                      height={20}
-                      className="object-contain"
+                      width={30}
+                      height={30}
+                      className="object-contain bg-white p-1 rounded-full"
                     />
                   </button>
                   <div className="flex-1 flex flex-col gap-3">
