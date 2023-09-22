@@ -2,8 +2,14 @@
 import { fetchCars } from "@/utils"
 import {CarCard, CustomFilter, Hero, SearchBar} from "./components"
 
-const page = async () => {
-  const allCars = await fetchCars()
+const page = async ({searchParams}) => {
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || ""
+  })
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
@@ -45,4 +51,4 @@ const page = async () => {
   )
 }
 
-export default page
+export default page;
