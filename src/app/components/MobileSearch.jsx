@@ -1,5 +1,5 @@
 import DateSelection from "./DateSelection";
-import HourseSelection from "./HourseSelection";
+import HourseSelection from "./HoursSelection";
 import LocationSelection from "./LocationSelection";
 
 const MobileSearch = () => {

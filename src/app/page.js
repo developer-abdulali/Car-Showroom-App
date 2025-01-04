@@ -20,7 +20,6 @@ const Home = () => {
       <CTA />
       <Footer />
       <GoToTop />
-      <div className="h-[4000px]"></div>
     </main>
   );
 };

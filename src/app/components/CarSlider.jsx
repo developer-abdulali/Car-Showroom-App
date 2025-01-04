@@ -2,6 +2,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
+import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../variants";
 
 const cars = [
   {
@@ -64,7 +67,13 @@ const cars = [
 
 const CarSlider = () => {
   return (
-    <div className="container mx-auto">
+    <motion.div
+      variants={fadeIn("left", 0.4)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
+      className="container mx-auto"
+    >
       <Swiper
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 15 },
@@ -75,7 +84,7 @@ const CarSlider = () => {
         {cars?.map((car, i) => {
           return (
             <SwiperSlide key={i}>
-              <div className="max-w-[385px] mx-auto sm:mx-0 bg-gray-100">
+              <div className="max-w-[385px] mx-auto sm:mx-0">
                 <Image
                   src={car.image}
                   width={380}
@@ -93,14 +102,20 @@ const CarSlider = () => {
                     </h3>
                   </div>
                   {/* stars */}
-                  <div>stars</div>
+                  <div className="flex gap-x-2 text-accent h-max">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </div>
                 </div>
                 {/* car info */}
                 <div className="flex gap-x-3 xl:gap-x-4 w-max mb-10">
                   {car.info.map((item, i) => {
                     return (
                       <div key={i} className="flex flex-col items-center">
-                        <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center">
+                        <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center mb-2">
                           <Image
                             src={item.icon}
                             width={24}
@@ -119,7 +134,7 @@ const CarSlider = () => {
           );
         })}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 export default CarSlider;

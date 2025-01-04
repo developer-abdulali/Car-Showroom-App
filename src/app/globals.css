@@ -3,7 +3,28 @@
 @tailwind utilities;
 
 /* date, range styles */
+/* date, range styles */
 .rdrDayToday:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span::after,
+.rdrDayToday:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span::after,
+.rdrDayToday:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span::after,
+.rdrDayToday:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span::after {
+  background-color: transparent !important; /* Remove background color */
+}
+
+.rdrDayToday .rdrDayNumber span::after {
+  background: transparent !important;
+}
+
+.rdrMonthAndYearPicker {
+  font-size: 16px;
+}
+
+.rdrDayNumber,
+.rdrWeeDay {
+  color: #1e1f23 !important;
+  font-weight: 500 !important;
+}
+/* .rdrDayToday:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span::after,
 .rdrDayToday:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span::after,
 .rdrDayToday:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span::after,
 .rdrDayToday:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span::after {
@@ -22,6 +43,12 @@
 .rdrWeeDay {
   color: #1e1f23 !important;
   font-weight: 500 !important;
+} */
+
+/* swiper style */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullet {
+  background-color: #ed1d24;
 }
 
 @layer base {

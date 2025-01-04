@@ -8,7 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 // location data
 const hoursData = ["10:00 AM", "12:00 AM", "14:00 AM", "16:00 AM"];
 
-const HourseSelection = () => {
+const HoursSelection = () => {
   const [hour, setHour] = useState("10:00 AM");
 
   return (
@@ -55,4 +55,4 @@ const HourseSelection = () => {
     </Menu>
   );
 };
-export default HourseSelection;
+export default HoursSelection;

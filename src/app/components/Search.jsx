@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { SearchContext } from "../context/search";
 import LocationSelection from "./LocationSelection";
 import DateSelection from "./DateSelection";
-import HourseSelection from "./HourseSelection";
+import HoursSelection from "./HoursSelection";
 
 const Search = () => {
   const { searchActive } = useContext(SearchContext);
+
   return (
     <div
       className={`${
@@ -17,7 +18,7 @@ const Search = () => {
       <div className={`flex h-full ${searchActive && "container mx-auto"}`}>
         <LocationSelection />
         <DateSelection />
-        <HourseSelection />
+        <HoursSelection />
 
         {/* search btn */}
         <div className="xl:h-full flex items-center px-6 xl:px-0">
