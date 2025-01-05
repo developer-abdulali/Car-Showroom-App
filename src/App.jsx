@@ -5,6 +5,7 @@ import Integration from "./components/Integration";
 import Testimonial from "./components/Testimonial";
 import Trial from "./components/Trial";
 import Footer from "./components/Footer";
+import GoToTop from "./components/GoToTop";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Testimonial />
       <Trial />
       <Footer />
+      <GoToTop />
     </div>
   );
 };
