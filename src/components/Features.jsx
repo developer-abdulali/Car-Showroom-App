@@ -54,7 +54,7 @@ const Features = () => {
   }, [index]);
 
   return (
-    <section className="text-white pt-32 relative">
+    <section className="text-white pt-32 relative px-4">
       <div className="container mx-auto">
         <div className="flex gap-16">
           {/* img */}

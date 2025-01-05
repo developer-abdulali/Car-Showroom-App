@@ -31,7 +31,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="w-full mb-24 xl:mb-32 flex items-center justify-center">
+    <section className="px-4 w-full mb-24 xl:mb-32 flex items-center justify-center">
       <div className="overflow-hidden">
         {/* text */}
         <motion.div
